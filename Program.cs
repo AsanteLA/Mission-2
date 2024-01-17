@@ -14,7 +14,7 @@ internal class Program
         System.Console.WriteLine("How many dice rolls would you like to simulate?\n");
         NoOfRolls = int.Parse(System.Console.ReadLine());
 
-        int percent1 = 100 / NoOfRolls; //Value in percentage of each roll
+        int percent1 = (int)(double)(100 / NoOfRolls); //Value in percentage of each roll
 
         System.Console.WriteLine("\nDICE ROLLING SIMULATION REULTS:");
         System.Console.WriteLine($"Each '*' represents {percent1}% of the total number of rolls");

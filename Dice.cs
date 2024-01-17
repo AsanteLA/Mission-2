@@ -63,8 +63,9 @@ namespace Mission__2
             for (int i = 0; i < SumCounts.Length; i++)
             {
              
-                int percent = ((SumCounts[i] * 100)/ NoOfRolls) / percent1;
-                System.Console.WriteLine($"{i + 2}: {new string ('*', percent)}");
+                double percent = ((double)SumCounts[i] / NoOfRolls) * 100;
+                //int AsteriskCount = (int)Math.Round(percent * 100 ); 
+                System.Console.WriteLine($"{i + 2}: {new string ('*', (int)Math.Round(percent))}"); 
             }
             
 
