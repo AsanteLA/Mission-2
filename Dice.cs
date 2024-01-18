@@ -32,13 +32,14 @@ namespace Mission__2
             int Sum12Count = 0;
             */
 
-
+            //For loop for Dice rolls based on the number of dice rolls required
             for (int iRolls = 1; iRolls <= NoOfRolls; iRolls++) 
             {
                 //Random number generators for both dice
                 int dice1 = random.Next(1, 7);
                 int dice2 = random.Next(1, 7);
 
+                //Summing up the rolls for each dice to get the rolls
                 int sum = dice1 + dice2;
 
                 /*
@@ -57,12 +58,13 @@ namespace Mission__2
                 */
 
                 if (sum >= 2 && sum <= 12) //making sure the sums are from 2 to 12
-                    SumCounts[sum-2]++;
+                    SumCounts[sum-2]++; // Incrementing the roll counts
             }
 
+            //Printing out the outputs for each roll
             for (int i = 0; i < SumCounts.Length; i++)
             {
-             
+                //Percentage for each dice roll
                 double percent = ((double)SumCounts[i] / NoOfRolls) * 100;
                 //int AsteriskCount = (int)Math.Round(percent * 100 ); 
                 System.Console.WriteLine($"{i + 2}: {new string ('*', (int)Math.Round(percent))}"); 
